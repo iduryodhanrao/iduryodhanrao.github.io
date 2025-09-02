@@ -37,15 +37,15 @@ Only **10** are shown here; [see all my repositories on GitHub](https://github.c
       <sup>Streamlit application leverages Snowflake Cortex, semantic search, and LLM-based text-to-SQL translation. </sup>
     </td>
     <td align="center" valign="top">
-      <a href="https://github.com/iduryodhanrao/mylibrary">
+      <a href="https://github.com/iduryodhanrao/stocktrading">
         <img src="https://skillicons.dev/icons?i=python" width="32" />
         <br/>
-        <b> Library management system </b>
+        <b> Automated stock trading </b>
       </a>
       <br/>
       <sub>Python</sub>
       <br/>
-      <sup>Implementations of full stack library managment system in Python.</sup>
+      <sup>Implementations of stock trading buy sell based on market sentiments in Python.</sup>
     </td>
     <td align="center" valign="top">
       <a href="https://github.com/iduryodhanrao/google-gemini-agents">
