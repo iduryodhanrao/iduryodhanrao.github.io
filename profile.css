@@ -178,6 +178,40 @@ body {
     line-height: 1.8;
 }
 
+.assistant-note {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: pulse-border 2s ease-in-out infinite;
+}
+
+.assistant-note i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.assistant-note strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+@keyframes pulse-border {
+    0%, 100% {
+        border-left-color: var(--primary-color);
+    }
+    50% {
+        border-left-color: var(--secondary-color);
+    }
+}
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
