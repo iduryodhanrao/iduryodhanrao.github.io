@@ -19,6 +19,29 @@
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --transition: all 0.3s ease;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --card-bg: #ffffff;
+    --hero-gradient-start: #f5f7fa;
+    --hero-gradient-end: #e3e8f0;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #f9fafb;
+        --text-secondary: #d1d5db;
+        --text-light: #9ca3af;
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-dark: #020617;
+        --border-color: #334155;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+        --navbar-bg: rgba(15, 23, 42, 0.95);
+        --card-bg: #1e293b;
+        --hero-gradient-start: #1e293b;
+        --hero-gradient-end: #0f172a;
+    }
 }
 
 body {
@@ -27,6 +50,7 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -41,7 +65,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--navbar-bg);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     z-index: 1000;
@@ -115,7 +139,7 @@ body {
     display: flex;
     align-items: center;
     padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e3e8f0 100%);
+    background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
 }
 
 .hero-content {
@@ -259,7 +283,13 @@ body {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    border: 8px solid white;
+    border: 8px solid var(--card-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    .image-wrapper {
+        border-color: var(--bg-secondary);
+    }
 }
 
 .image-wrapper img {
@@ -331,7 +361,7 @@ body {
 }
 
 .skill-tag {
-    background-color: white;
+    background-color: var(--card-bg);
     color: var(--text-primary);
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -389,7 +419,7 @@ body {
 }
 
 .timeline-content {
-    background-color: white;
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -495,7 +525,7 @@ body {
 }
 
 .project-card {
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -630,7 +660,7 @@ body {
 .certification-item {
     display: flex;
     gap: 1.5rem;
-    background-color: white;
+    background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -771,6 +801,8 @@ body {
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
@@ -890,7 +922,7 @@ body {
 }
 
 .chat-modal-content {
-    background: white;
+    background: var(--card-bg);
     border-radius: 16px;
     width: 100%;
     max-width: 900px;
@@ -945,7 +977,7 @@ body {
 .chat-modal-body {
     flex: 1;
     overflow: hidden;
-    background: #f9fafb;
+    background: var(--bg-secondary);
 }
 
 .chat-modal-body iframe {
@@ -955,7 +987,7 @@ body {
 .chat-modal-footer {
     padding: 1rem 1.5rem;
     border-top: 1px solid var(--border-color);
-    background: white;
+    background: var(--card-bg);
     border-radius: 0 0 16px 16px;
 }
 
@@ -1035,7 +1067,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color: var(--card-bg);
         width: 100%;
         text-align: center;
         transition: 0.3s;
